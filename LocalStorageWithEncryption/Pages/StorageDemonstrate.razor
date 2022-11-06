@@ -1,0 +1,64 @@
+﻿@page "/storage-demonstrate"
+@using LocalStorageWithEncryption.Data
+@using Microsoft.AspNetCore.Components.Server.ProtectedBrowserStorage
+@inject ProtectedLocalStorage ProtectedLocalStorage
+
+<h3>StorageDemonstrate</h3>
+<div class="border border-primary border-3 p-3">
+    <p>Store value form</p>
+    <EditForm Model="StoreModel" class="d-flex flex-column g-3">
+        <label class="form-label">
+            Key:
+            <InputText class="form-control" @bind-Value="StoreModel.Key" />
+        </label>
+        <label class="form-label">
+            Value:
+            <InputText class="form-control" @bind-Value="StoreModel.Value" />
+        </label>
+        <button class="btn btn-primary" type="button" @onclick="StoreValueAsync">Store value</button>
+    </EditForm>
+</div>
+
+<div class="border border-primary border-3 p-3 mt-3">
+    <p>Retrieve value form</p>
+    <EditForm Model="OperationModel" class="d-flex flex-column">
+        <label class="form-label">
+            Key:
+            <InputText class="form-control" @bind-Value="OperationModel.Key" />
+        </label>
+        <label class="form-label">
+            Retrieved value: @OperationModel.Value
+        </label>
+        <button class="btn btn-primary" type="button" @onclick="RetrieveValueAsync">Retrieve value</button>
+        <button class="btn btn-primary" type="button" @onclick="DeleteValueAsync">Delete value</button>
+    </EditForm>
+</div>
+
+@code {
+    public BlazorSchoolStorageModel StoreModel { get; set; } = new();
+    public BlazorSchoolStorageModel OperationModel { get; set; } = new();
+
+    public async Task StoreValueAsync()
+    {
+        await ProtectedLocalStorage.SetAsync(StoreModel.Key, StoreModel.Value);
+    }
+
+    public async Task RetrieveValueAsync()
+    {
+        var retrieveResult = await ProtectedLocalStorage.GetAsync<string>(OperationModel.Key);
+
+        if (retrieveResult.Success)
+        {
+            OperationModel.Value = retrieveResult.Value ?? string.Empty;
+        }
+        else
+        {
+            OperationModel.Value = "Cannot retrieve value!";
+        }
+    }
+
+    public async Task DeleteValueAsync()
+    {
+        await ProtectedLocalStorage.DeleteAsync(OperationModel.Key);
+    }
+}
