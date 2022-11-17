@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocalStorageWithEncryption", "LocalStorageWithEncryption\LocalStorageWithEncryption.csproj", "{5DC4D573-752A-474E-8D24-82479F348912}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LocalStorageWithEncryption", "LocalStorageWithEncryption\LocalStorageWithEncryption.csproj", "{5DC4D573-752A-474E-8D24-82479F348912}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CacheStorage", "CacheStorage\CacheStorage.csproj", "{51F135F2-2C31-4202-B536-92569C50F58B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CookieStorage", "CookieStorage\CookieStorage.csproj", "{17F80F5F-E240-459C-B1B1-FD6219598F7D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{5DC4D573-752A-474E-8D24-82479F348912}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5DC4D573-752A-474E-8D24-82479F348912}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5DC4D573-752A-474E-8D24-82479F348912}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51F135F2-2C31-4202-B536-92569C50F58B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51F135F2-2C31-4202-B536-92569C50F58B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51F135F2-2C31-4202-B536-92569C50F58B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51F135F2-2C31-4202-B536-92569C50F58B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17F80F5F-E240-459C-B1B1-FD6219598F7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17F80F5F-E240-459C-B1B1-FD6219598F7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17F80F5F-E240-459C-B1B1-FD6219598F7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17F80F5F-E240-459C-B1B1-FD6219598F7D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
