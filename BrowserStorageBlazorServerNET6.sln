@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IndexedDbStorage", "Indexed
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocalStorageWithoutEncryption", "LocalStorageWithoutEncryption\LocalStorageWithoutEncryption.csproj", "{707DAE3C-0B7C-49CF-967E-BC84B3DC7B5A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MemoryStorage", "MemoryStorage\MemoryStorage.csproj", "{12E30162-83F1-4ACF-838E-0BB56943710D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{707DAE3C-0B7C-49CF-967E-BC84B3DC7B5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{707DAE3C-0B7C-49CF-967E-BC84B3DC7B5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{707DAE3C-0B7C-49CF-967E-BC84B3DC7B5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12E30162-83F1-4ACF-838E-0BB56943710D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12E30162-83F1-4ACF-838E-0BB56943710D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12E30162-83F1-4ACF-838E-0BB56943710D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12E30162-83F1-4ACF-838E-0BB56943710D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
